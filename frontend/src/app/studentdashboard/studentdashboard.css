@@ -1,0 +1,170 @@
+.dashboard {
+    width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.dashboard h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.actions button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    background-color: #555;
+}
+
+.student-form {
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.student-form h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.student-form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.student-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.student-form > button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.student-form > button:hover {
+    background-color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin: -10px 0 12px;
+}
+
+.student-list {
+    margin-top: 30px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.student-list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.student-list th,
+.student-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 12px;
+    word-wrap: break-word;
+}
+
+.student-list th {
+    background-color: #f5f5f5;
+}
+
+.student-list tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.student-list th:nth-child(1),
+.student-list td:nth-child(1) {
+    width: 9%;
+}
+
+.student-list th:nth-child(2),
+.student-list td:nth-child(2) {
+    width: 9%;
+}
+
+.student-list th:nth-child(3),
+.student-list td:nth-child(3) {
+    width: 10%;
+}
+
+.student-list th:nth-child(4),
+.student-list td:nth-child(4) {
+    width: 14%;
+}
+
+.student-list th:nth-child(5),
+.student-list td:nth-child(5) {
+    width: 10%;
+}
+
+.student-list th:nth-child(6),
+.student-list td:nth-child(6) {
+    width: 10%;
+}
+
+.student-list th:nth-child(7),
+.student-list td:nth-child(7) {
+    width: 12%;
+}
+
+.student-list th:nth-child(8),
+.student-list td:nth-child(8) {
+    width: 15%;
+}
+
+.student-list th.actions-column,
+.student-list td.actions-column {
+    width: 11%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.student-list td.actions-column button {
+    display: inline-block;
+    padding: 5px 7px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.student-list td.actions-column button:hover {
+    background-color: #555;
+}

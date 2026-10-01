@@ -1,0 +1,32 @@
+<div class="login-container">
+
+    <h2>Login</h2>
+
+    <label>Email</label>
+
+    <input
+        type="email"
+        [(ngModel)]="email"
+    >
+
+    @if (emailError()) {
+        <p class="error">{{ emailError() }}</p>
+    }
+
+    <label>Password</label>
+
+    <input
+        type="password"
+        [(ngModel)]="password"
+    >
+
+    @if (passwordError()) {
+        <p class="error">{{ passwordError() }}</p>
+    }
+
+    <button (click)="login()">Login</button>
+<p class="signup-link">
+    Don't have an account?
+    <button type="button" (click)="goToSignup()">Sign Up</button>
+</p>
+</div>

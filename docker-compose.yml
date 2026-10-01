@@ -1,0 +1,26 @@
+services:
+  backend:
+    build: ./backend
+    container_name: studentcrud-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+          - mongodb-data:/data/db
+
+  frontend:
+    build: ./frontend
+    container_name: studentcrud-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+volumes:
+    mongodb-data:
