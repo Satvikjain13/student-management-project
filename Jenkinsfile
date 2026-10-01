@@ -2,21 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Building Student Management Project'
+                checkout scm
             }
         }
 
-        stage('Test') {
+        stage('Backend Test') {
             steps {
-                echo 'Running tests'
+                bat 'cd backend && mvn test'
+            }
+        }
+
+        stage('Frontend Build') {
+            steps {
+                bat 'cd frontend && npm install'
+                bat 'cd frontend && npx ng build'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                bat 'docker compose build'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application'
+                bat 'docker compose up -d'
             }
         }
     }
