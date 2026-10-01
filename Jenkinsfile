@@ -24,13 +24,13 @@ pipeline {
 
         stage('Docker Down') {
             steps {
-                bat 'cd project && docker compose down'
+                bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" down'
             }
         }
 
         stage('Docker Up') {
             steps {
-                bat 'cd project && docker compose up -d'
+                bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" up -d'
             }
         }
     }
