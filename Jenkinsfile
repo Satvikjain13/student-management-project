@@ -2,15 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Start Database') {
             steps {
-                checkout scm
+                bat 'docker compose up -d mongodb'
             }
         }
 
         stage('Backend Test') {
             steps {
-                bat 'cd backend && mvn test'
+                bat 'docker run --rm --network student-management-network -v "%cd%\\backend:/app" -w /app maven:3.9.11-eclipse-temurin-17 mvn test'
             }
         }
 

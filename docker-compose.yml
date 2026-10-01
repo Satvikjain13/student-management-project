@@ -23,4 +23,8 @@ services:
     depends_on:
       - backend
 volumes:
-    mongodb-data:
+  mongodb-data:
+
+networks:
+  default:
+    name: student-management-network
