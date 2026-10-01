@@ -2,22 +2,35 @@ pipeline {
     agent any
 
     stages {
-        stage('Backend Test') {
+        stage('Clone') {
             steps {
-                bat 'cd backend && mvn test'
+                bat 'if exist project rmdir /s /q project'
+                bat 'git clone https://github.com/Satvikjain13/student-management-project.git project'
             }
         }
 
-        stage('Frontend Build') {
+        stage('Maven Build') {
             steps {
-                bat 'cd frontend && npm install'
-                bat 'cd frontend && npx ng build'
+                bat 'cd project\\backend && mvn clean package -DskipTests'
             }
         }
 
-        stage('Deploy') {
+        stage('NPM Build') {
             steps {
-                bat 'docker compose up -d'
+                bat 'cd project\\frontend && npm install'
+                bat 'cd project\\frontend && npx ng build'
+            }
+        }
+
+        stage('Docker Down') {
+            steps {
+                bat 'cd project && docker compose down'
+            }
+        }
+
+        stage('Docker Up') {
+            steps {
+                bat 'cd project && docker compose up -d'
             }
         }
     }
