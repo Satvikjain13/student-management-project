@@ -17,7 +17,7 @@ pipeline {
 
         stage('Docker Up') {
             steps {
-                bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" up -d'
+                bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" up -d --build'
             }
         }
     }
