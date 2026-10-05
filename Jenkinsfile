@@ -15,13 +15,6 @@ pipeline {
             }
         }
 
-        stage('NPM Build') {
-            steps {
-                bat 'cd project\\frontend && npm install'
-                bat 'cd project\\frontend && npx ng build'
-            }
-        }
-
         stage('Docker Down') {
             steps {
                 bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" down'
