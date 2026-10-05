@@ -9,12 +9,6 @@ pipeline {
             }
         }
 
-        stage('Maven Build') {
-            steps {
-                bat 'cd project\\backend && mvn clean package -DskipTests'
-            }
-        }
-
         stage('Docker Down') {
             steps {
                 bat 'cd project && "C:\\Users\\NCS\\.docker\\cli-plugins\\docker-compose.exe" down'
