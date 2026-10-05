@@ -3,9 +3,9 @@
     margin: 40px auto;
     padding: 30px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
+    border: 1px solid #d6dbe1;
     border-radius: 8px;
-    background-color: white;
+    background-color: #f8fafc;
 }
 
 .dashboard h2 {
@@ -23,18 +23,18 @@
     padding: 10px 18px;
     border: none;
     border-radius: 4px;
-    background-color: #333;
-    color: white;
+    background-color: #2563eb;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .actions button:hover {
-    background-color: #555;
+    background-color: #1d4ed8;
 }
 
 .student-form {
     padding: 25px;
-    border: 1px solid #ddd;
+    border: 1px solid #d6dbe1;
     border-radius: 6px;
 }
 
@@ -53,7 +53,7 @@
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #b8c2cc;
     border-radius: 4px;
 }
 
@@ -63,17 +63,17 @@
     margin-top: 5px;
     border: none;
     border-radius: 4px;
-    background-color: #333;
-    color: white;
+    background-color: #2563eb;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .student-form > button:hover {
-    background-color: #555;
+    background-color: #1d4ed8;
 }
 
 .error {
-    color: red;
+    color: #dc2626;
     font-size: 13px;
     margin: -10px 0 12px;
 }
@@ -92,7 +92,7 @@
 
 .student-list th,
 .student-list td {
-    border: 1px solid #ddd;
+    border: 1px solid #d6dbe1;
     padding: 8px;
     text-align: left;
     font-size: 12px;
@@ -100,11 +100,11 @@
 }
 
 .student-list th {
-    background-color: #f5f5f5;
+    background-color: #e8eef7;
 }
 
 .student-list tr:nth-child(even) {
-    background-color: #fafafa;
+    background-color: #f1f5f9;
 }
 
 .student-list th:nth-child(1),
@@ -160,11 +160,11 @@
     margin: 2px;
     border: none;
     border-radius: 4px;
-    background-color: #333;
-    color: white;
+    background-color: #2563eb;
+    color: #ffffff;
     cursor: pointer;
 }
 
 .student-list td.actions-column button:hover {
-    background-color: #555;
+    background-color: #1d4ed8;
 }
